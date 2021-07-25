@@ -20,7 +20,8 @@ class GameScreen : AppCompatActivity() {
 
         val layout = findViewById<ConstraintLayout>(R.id.game_screen_layout)
 
-        curScene = Scene(0, layout, this)
+//        curScene = SimpleScene(0, layout, this)
+        curScene = DecisionScene(2, layout, this)
         curScene!!.show()
     }
 

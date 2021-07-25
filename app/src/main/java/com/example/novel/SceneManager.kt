@@ -1,7 +1,7 @@
 package com.example.novel
 
 class SceneManager {
-    val idBackgorundMap = mapOf<Int, String>(0 to "anime_tyan", 1 to "renesans_tyan")
+    val idBackgorundMap = mapOf<Int, String>(0 to "anime_tyan", 1 to "renesans_tyan", 2 to "anime_tyan")
 
     val idTextMap = mapOf<Int, String>(0 to "Sosi huyaru", 1 to "Jizn' horosha")
 
@@ -13,6 +13,6 @@ class SceneManager {
         return (id + 1) % 2
     }
 
-    fun nextScene(curScene: Scene): Scene = Scene(nextId(curScene.id), curScene.layout, curScene.context)
+    fun nextScene(curScene: Scene): Scene = SimpleScene(nextId(curScene.id), curScene.layout, curScene.context)
 
 }
